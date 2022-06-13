@@ -25,11 +25,12 @@ const MenuDetail = () => {
                     <p>{ menu.description }</p>
                 </Row>
                 <Row>
+                    <h2>Menu items:</h2>
                     <ListGroup>
                     { 
-                        menu.items.map(item => (
-                            <ListGroupItem>
-                                { item.name + "   " + item.description + "   " + item.price }
+                        menu.items.map((item, index) => (
+                            <ListGroupItem key={index}>
+                                { item.name + "   " + item.description + "   €" + item.price }
                             </ListGroupItem>
                         ))
                     }
