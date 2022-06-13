@@ -3,7 +3,7 @@ const baseUrl = "https://robinvanhoof.tech:1000";
 export async function GetMenu(token)
 {
     let res = await
-        fetch(baseUrl + "Public/GetMenu?token=" + token, {
+        fetch(baseUrl + "/Public/GetMenu?token=" + token, {
             method: "GET",
             headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": '*' }
         });
